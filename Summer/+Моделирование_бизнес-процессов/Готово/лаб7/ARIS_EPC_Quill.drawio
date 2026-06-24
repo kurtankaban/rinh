@@ -1,0 +1,348 @@
+<mxfile host="app.diagrams.net" agent="Claude">
+  <diagram id="epc-quill-lab7" name="Lab 7 – ARIS EPC Quill">
+    <mxGraphModel dx="2361" dy="1110" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="meta-title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Verdana;fontSize=11;" value="&lt;b&gt;Лабораторная работа № 7&lt;/b&gt;&lt;br&gt;Диаграмма ARIS EPC: «Сборка и тестирование компьютеров» (Quill)&lt;br&gt;Автор: Трофимов А.Н." vertex="1">
+          <mxGeometry height="60" width="1000" x="327" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-box" parent="1" style="swimlane;fontFamily=Verdana;fontSize=10;fontStyle=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;startSize=25;" value="ЛЕГЕНДА" vertex="1">
+          <mxGeometry height="340" width="280" x="20" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-event" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;size=10;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Verdana;fontSize=9;" value="Событие (Event)" vertex="1">
+          <mxGeometry height="40" width="120" x="30" y="115" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-func" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Verdana;fontSize=9;" value="Функция (Function)" vertex="1">
+          <mxGeometry height="40" width="125" x="165" y="115" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-and" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontFamily=Verdana;fontSize=9;fontStyle=1;" value="AND" vertex="1">
+          <mxGeometry height="40" width="50" x="30" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-and-lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Verdana;fontSize=9;" value="Логический оператор AND" vertex="1">
+          <mxGeometry height="40" width="200" x="90" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-xor" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontFamily=Verdana;fontSize=9;fontStyle=1;" value="XOR" vertex="1">
+          <mxGeometry height="40" width="50" x="30" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-xor-lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Verdana;fontSize=9;" value="Логический оператор XOR" vertex="1">
+          <mxGeometry height="40" width="200" x="90" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-doc" parent="1" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=0.27;fillColor=#f5f5f5;strokeColor=#666666;fontFamily=Verdana;fontSize=9;" value="Документ" vertex="1">
+          <mxGeometry height="40" width="80" x="30" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-org" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontFamily=Verdana;fontSize=9;" value="Орг. единица" vertex="1">
+          <mxGeometry height="40" width="80" x="125" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-it" parent="1" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d6b656;double=1;fontFamily=Verdana;fontSize=9;" value="ИТ-система" vertex="1">
+          <mxGeometry height="40" width="80" x="215" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-arrow-lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Verdana;fontSize=9;" value="→  Поток управления (Control Flow)" vertex="1">
+          <mxGeometry height="30" width="260" x="30" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-info-lbl" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontFamily=Verdana;fontSize=9;" value="⟶  Поток информации (Info Flow)" vertex="1">
+          <mxGeometry height="30" width="260" x="30" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="ev-start" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Verdana;fontSize=10;" value="Заказ на сборку получен" vertex="1">
+          <mxGeometry height="60" width="200" x="577" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="fn-check" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Verdana;fontSize=10;" value="Проверить наличие компонентов" vertex="1">
+          <mxGeometry height="60" width="200" x="577" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-1" edge="1" parent="1" source="ev-start" style="edgeStyle=orthogonalEdgeStyle;" target="fn-check">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="org-disp1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontFamily=Verdana;fontSize=9;" value="Диспетчер" vertex="1">
+          <mxGeometry height="50" width="110" x="380" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-org1" edge="1" parent="1" source="org-disp1" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;" target="fn-check">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="doc-list1" parent="1" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=0.27;fillColor=#f5f5f5;strokeColor=#666666;fontFamily=Verdana;fontSize=9;" value="Список компонентов" vertex="1">
+          <mxGeometry height="50" width="110" x="380" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-doc1" edge="1" parent="1" source="doc-list1" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;" target="fn-check">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="it-inv" parent="1" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d6b656;double=1;fontFamily=Verdana;fontSize=9;" value="Система учёта комплектующих" vertex="1">
+          <mxGeometry height="60" width="150" x="860" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-it1" edge="1" parent="1" source="it-inv" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;" target="fn-check">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ev-checked" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Verdana;fontSize=10;" value="Компоненты проверены" vertex="1">
+          <mxGeometry height="60" width="200" x="577" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-2" edge="1" parent="1" source="fn-check" style="edgeStyle=orthogonalEdgeStyle;" target="ev-checked">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xor-split1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontFamily=Verdana;fontSize=10;fontStyle=1;" value="XOR" vertex="1">
+          <mxGeometry height="50" width="100" x="627" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-3" edge="1" parent="1" source="ev-checked" style="edgeStyle=orthogonalEdgeStyle;" target="xor-split1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ev-instock" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Verdana;fontSize=10;" value="Компоненты в наличии" vertex="1">
+          <mxGeometry height="60" width="200" x="870" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-4a" edge="1" parent="1" source="xor-split1" style="edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="ev-instock">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="970" y="455" />
+            </Array>
+            <mxPoint x="960" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ev-missing" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Verdana;fontSize=10;" value="Компоненты отсутствуют" vertex="1">
+          <mxGeometry height="60" width="200" x="290" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-4b" edge="1" parent="1" source="xor-split1" style="edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="ev-missing">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="455" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fn-order" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Verdana;fontSize=10;" value="Заказать недостающие компоненты" vertex="1">
+          <mxGeometry height="60" width="200" x="290" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-5a" edge="1" parent="1" source="ev-missing" style="edgeStyle=orthogonalEdgeStyle;" target="fn-order">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="org-disp2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontFamily=Verdana;fontSize=9;" value="Диспетчер" vertex="1">
+          <mxGeometry height="50" width="110" x="100" y="645" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-org2" edge="1" parent="1" source="org-disp2" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;" target="fn-order">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="doc-req" parent="1" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=0.27;fillColor=#f5f5f5;strokeColor=#666666;fontFamily=Verdana;fontSize=9;" value="Заявка на закупку" vertex="1">
+          <mxGeometry height="50" width="110" x="100" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-doc2" edge="1" parent="1" source="doc-req" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;" target="fn-order">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="370" y="735" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ev-received" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Verdana;fontSize=10;" value="Компоненты получены" vertex="1">
+          <mxGeometry height="60" width="200" x="290" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-5b" edge="1" parent="1" source="fn-order" style="edgeStyle=orthogonalEdgeStyle;" target="ev-received">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xor-merge1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontFamily=Verdana;fontSize=10;fontStyle=1;" value="XOR" vertex="1">
+          <mxGeometry height="50" width="100" x="627" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-merge-a" edge="1" parent="1" source="ev-instock" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="xor-merge1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="970" y="885" />
+            </Array>
+            <mxPoint x="730" y="885" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr-merge-b" edge="1" parent="1" source="ev-received" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="xor-merge1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="885" />
+              <mxPoint x="627" y="885" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fn-batch" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Verdana;fontSize=10;" value="Сформировать партию сборки" vertex="1">
+          <mxGeometry height="60" width="200" x="577" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-6" edge="1" parent="1" source="xor-merge1" style="edgeStyle=orthogonalEdgeStyle;" target="fn-batch">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="org-disp3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontFamily=Verdana;fontSize=9;" value="Диспетчер" vertex="1">
+          <mxGeometry height="50" width="110" x="380" y="1015" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-org3" edge="1" parent="1" source="org-disp3" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;" target="fn-batch">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="it-sched" parent="1" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d6b656;double=1;fontFamily=Verdana;fontSize=9;" value="Модуль расписания" vertex="1">
+          <mxGeometry height="50" width="150" x="860" y="965" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-it2" edge="1" parent="1" source="it-sched" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;" target="fn-batch">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ev-batched" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Verdana;fontSize=10;" value="Партия сформирована" vertex="1">
+          <mxGeometry height="60" width="200" x="577" y="1070" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-7" edge="1" parent="1" source="fn-batch" style="edgeStyle=orthogonalEdgeStyle;" target="ev-batched">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="and-split1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontFamily=Verdana;fontSize=10;fontStyle=1;" value="AND" vertex="1">
+          <mxGeometry height="50" width="100" x="627" y="1180" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-8" edge="1" parent="1" source="ev-batched" style="edgeStyle=orthogonalEdgeStyle;" target="and-split1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fn-desktop" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Verdana;fontSize=10;" value="Собрать настольные компьютеры" vertex="1">
+          <mxGeometry height="60" width="200" x="350" y="1290" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-9a" edge="1" parent="1" source="and-split1" style="edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="fn-desktop">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="1205" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="org-asm1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontFamily=Verdana;fontSize=9;" value="Сборщики" vertex="1">
+          <mxGeometry height="50" width="110" x="150" y="1295" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-asm1" edge="1" parent="1" source="org-asm1" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;" target="fn-desktop">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="doc-instr1" parent="1" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=0.27;fillColor=#f5f5f5;strokeColor=#666666;fontFamily=Verdana;fontSize=9;" value="Инструкция по сборке" vertex="1">
+          <mxGeometry height="50" width="110" x="150" y="1360" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-instr1" edge="1" parent="1" source="doc-instr1" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;" target="fn-desktop">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="420" y="1385" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fn-laptop" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Verdana;fontSize=10;" value="Собрать ноутбуки" vertex="1">
+          <mxGeometry height="60" width="200" x="800" y="1290" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-9b" edge="1" parent="1" source="and-split1" style="edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="fn-laptop">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="900" y="1205" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="org-asm2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontFamily=Verdana;fontSize=9;" value="Сборщики" vertex="1">
+          <mxGeometry height="50" width="110" x="1090" y="1295" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-asm2" edge="1" parent="1" source="org-asm2" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;" target="fn-laptop">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="doc-instr2" parent="1" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=0.27;fillColor=#f5f5f5;strokeColor=#666666;fontFamily=Verdana;fontSize=9;" value="Инструкция по сборке" vertex="1">
+          <mxGeometry height="50" width="110" x="1090" y="1360" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-instr2" edge="1" parent="1" source="doc-instr2" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;" target="fn-laptop">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="940" y="1385" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="and-merge1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontFamily=Verdana;fontSize=10;fontStyle=1;" value="AND" vertex="1">
+          <mxGeometry height="50" width="100" x="627" y="1410" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-10a" edge="1" parent="1" source="fn-desktop" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="and-merge1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="450" y="1435" />
+              <mxPoint x="627" y="1435" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr-10b" edge="1" parent="1" source="fn-laptop" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="and-merge1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="900" y="1435" />
+              <mxPoint x="727" y="1435" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ev-assembled" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Verdana;fontSize=10;" value="Компьютеры собраны" vertex="1">
+          <mxGeometry height="60" width="200" x="577" y="1510" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-11" edge="1" parent="1" source="and-merge1" style="edgeStyle=orthogonalEdgeStyle;" target="ev-assembled">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="fn-test" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Verdana;fontSize=10;" value="Провести тестирование" vertex="1">
+          <mxGeometry height="60" width="200" x="577" y="1620" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-12" edge="1" parent="1" source="ev-assembled" style="edgeStyle=orthogonalEdgeStyle;" target="fn-test">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="org-tester" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontFamily=Verdana;fontSize=9;" value="Тестировщик" vertex="1">
+          <mxGeometry height="50" width="110" x="380" y="1600" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-org-t" edge="1" parent="1" source="org-tester" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;" target="fn-test">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="it-test" parent="1" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d6b656;double=1;fontFamily=Verdana;fontSize=9;" value="Система тестирования" vertex="1">
+          <mxGeometry height="50" width="150" x="860" y="1625" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-it-t" edge="1" parent="1" source="it-test" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;" target="fn-test">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="doc-protocol" parent="1" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=0.27;fillColor=#f5f5f5;strokeColor=#666666;fontFamily=Verdana;fontSize=9;" value="Протокол тестирования" vertex="1">
+          <mxGeometry height="50" width="110" x="380" y="1660" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-doc-t" edge="1" parent="1" source="doc-protocol" style="edgeStyle=orthogonalEdgeStyle;dashed=1;endArrow=open;endFill=0;" target="fn-test">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ev-tested" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Verdana;fontSize=10;" value="Тестирование завершено" vertex="1">
+          <mxGeometry height="60" width="200" x="577" y="1730" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-13" edge="1" parent="1" source="fn-test" style="edgeStyle=orthogonalEdgeStyle;" target="ev-tested">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xor-split2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontFamily=Verdana;fontSize=10;fontStyle=1;" value="XOR" vertex="1">
+          <mxGeometry height="50" width="100" x="627" y="1840" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-14" edge="1" parent="1" source="ev-tested" style="edgeStyle=orthogonalEdgeStyle;" target="xor-split2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ev-pass" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Verdana;fontSize=10;" value="Тест пройден" vertex="1">
+          <mxGeometry height="60" width="200" x="850" y="1930" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-pass" edge="1" parent="1" source="xor-split2" style="edgeStyle=orthogonalEdgeStyle;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="ev-pass">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="950" y="1865" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fn-ship" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Verdana;fontSize=10;" value="Передать на отгрузку" vertex="1">
+          <mxGeometry height="60" width="200" x="850" y="2040" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-ship1" edge="1" parent="1" source="ev-pass" style="edgeStyle=orthogonalEdgeStyle;" target="fn-ship">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ev-end" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Verdana;fontSize=10;strokeWidth=3;" value="Компьютеры готовы к отгрузке" vertex="1">
+          <mxGeometry height="60" width="200" x="850" y="2150" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-end" edge="1" parent="1" source="fn-ship" style="edgeStyle=orthogonalEdgeStyle;" target="ev-end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ev-fail" parent="1" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;size=20;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Verdana;fontSize=10;" value="Тест не пройден" vertex="1">
+          <mxGeometry height="60" width="200" x="290" y="1930" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-fail" edge="1" parent="1" source="xor-split2" style="edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="ev-fail">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="390" y="1865" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fn-rework" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Verdana;fontSize=10;" value="Вернуть на доработку" vertex="1">
+          <mxGeometry height="60" width="200" x="290" y="2040" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-rework1" edge="1" parent="1" source="ev-fail" style="edgeStyle=orthogonalEdgeStyle;" target="fn-rework">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-loop" edge="1" parent="1" source="fn-rework" style="edgeStyle=orthogonalEdgeStyle;dashed=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endArrow=block;endFill=1;fontFamily=Verdana;fontSize=9;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="fn-batch" value="На доработку">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="50" y="2070" />
+              <mxPoint x="50" y="970" />
+              <mxPoint x="550" y="970" />
+              <mxPoint x="550" y="990" />
+            </Array>
+            <mxPoint x="550" y="930" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
